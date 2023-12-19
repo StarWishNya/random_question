@@ -8,6 +8,7 @@ def openfile(filename='1.txt'):
     try:
         with open(os.path.dirname(__file__) +'\\resources\\'+filename,'r',encoding='utf-8') as f:
             file=f.read()
+            file=file.replace('：',':')
     except Exception as e:
         print(e)
     return file
@@ -21,7 +22,7 @@ class Question:
 def classify(file):
     global Questions
     n=int(1)
-    s_question=file.split('题干:')
+    s_question=file.split('题干: ')
     for  single_question in s_question:
         stem = r'(.*?)\n'
         match = re.search(stem, single_question, re.DOTALL)

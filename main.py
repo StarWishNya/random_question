@@ -10,9 +10,14 @@ def test(questionlist):
             u_answer=u_answer.upper()
             if u_answer=="EXIT":
                 return
-            if u_answer==question.answer:
+            elif u_answer==question.answer:
                 print("Correct!")
                 judge=True
+            elif u_answer=="NEXT":
+                break
+            elif u_answer=="SHOW":
+                print(question.answer)
+                break
             else:
                 print("Wrong!")
                 u_answer=input()
@@ -28,9 +33,14 @@ def randomtest(questionlist):
             u_answer=u_answer.upper()
             if u_answer=="EXIT":
                 return
-            if u_answer==question.answer:
+            elif u_answer==question.answer:
                 print("Correct!")
                 judge=True
+            elif u_answer=="NEXT":
+                break
+            elif u_answer=="SHOW":
+                print(question.answer)
+                break
             else:
                 print("Wrong!")
                 u_answer=input()
