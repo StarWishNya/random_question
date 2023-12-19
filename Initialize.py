@@ -53,13 +53,17 @@ def classify(file):
 
 def flag():
     print('flag')
-def print_question():
+
+def print_question(ques):
     print('print_question')
-    for i in Questions:
+    for i in ques:
         print(i.stem)
         print(i.options)
         print(i.answer)
         print()
+
 def initialize(filename='1.txt'):
+    global Questions
     file=openfile(filename)
-    classify(file)
+    classify(file)#将文件中的题目分类
+    return Questions
