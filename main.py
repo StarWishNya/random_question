@@ -48,7 +48,8 @@ def randomtest(questionlist):
                 u_answer=input()
 
 def main():
-    questionlist = Initialize.initialize()
+    filename=input("Please input the filename:")
+    questionlist = Initialize.initialize(filename)
     model=input("Please choose a model: 1.random 2.sequence\n")
     if model=="1":
         randomtest(questionlist)
