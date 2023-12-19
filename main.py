@@ -17,6 +17,7 @@ def test(questionlist):
                 break
             elif u_answer=="SHOW":
                 print(question.answer)
+                print()
                 break
             else:
                 print("Wrong!")
@@ -40,6 +41,7 @@ def randomtest(questionlist):
                 break
             elif u_answer=="SHOW":
                 print(question.answer)
+                print()
                 break
             else:
                 print("Wrong!")

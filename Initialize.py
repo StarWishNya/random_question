@@ -44,9 +44,15 @@ def classify(file):
             answer = match.group(1).strip()
         else:
             answer = None
-        if stem==None or options==None or answer==None:
+        if stem==None and options==None and answer==None:
             pass
         else:
+            if stem==None:
+                stem='题干缺失'
+            if options==None:
+                options=''
+            if answer==None:
+                answer='答案缺失'
             Questions.append(Question(stem, options, answer))
             #print(Questions[-1].stem, Questions[-1].options, Questions[-1].answer)
             n += 1
