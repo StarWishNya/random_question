@@ -1,5 +1,11 @@
 import Initialize
 import random
+import tkinter as tk
+
+window=tk.Tk()
+window.title("Test")
+window.geometry("500x300")
+
 def test(questionlist):
     for question in questionlist:
         print(question.stem)
